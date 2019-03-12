@@ -1,0 +1,107 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+    <div class="w-100">
+        <h1 class="mb-0">Andrew
+            <span class="text-primary">Jennings</span>
+        </h1>
+        <div class="subheading mb-5">Philadelphia, PA · 
+            <a href="mailto:afjennings@gmail.com">afjennings@gmail.com</a>
+        </div>
+        <p class="lead mb-5">I am a web developer with more than ten years of experience creating attractive and easy-to-use applications. My experience in systems administration means that I can design and debug an application from top to bottom and deploy it on local hardware or in the cloud.</p>
+        <div class="social-icons">
+            <a href="https://github.com/andrewjennings" target="github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/af_jennings" target="twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+    <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+
+        {% for experience in site.data.experiences %}
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+                <h3 class="mb-0">{{ experience.title }}</h3>
+                <div class="subheading mb-3">{{ experience.employer }}</div>
+                <p>{{ experience.description }}</p>
+            </div>
+            <div class="resume-date text-md-right">
+                <span class="text-primary">{{ experience.time_frame }}</span>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+    <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        {% for education in site.data.educations %}
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+                <h3 class="mb-0">{{ education.location }}</h3>
+                <div class="subheading mb-3">{{ education.degree}}</div>
+                <div>{{ education.track }}</div>
+            </div>
+            <div class="resume-date text-md-right">
+                <span class="text-primary">{{ education.time_frame }}</span>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+<hr class="m-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+    <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+            <li class="list-inline-item">
+                <i class="fab fa-html5"></i>
+            </li>
+            <li class="list-inline-item">
+                <i class="fab fa-css3-alt"></i>
+            </li>
+            <li class="list-inline-item">
+                <i class="fab fa-js-square"></i>
+            </li>
+            <li class="list-inline-item">
+                <i class="fab fa-angular"></i>
+            </li>
+            <li class="list-inline-item">
+                <i class="fab fa-php"></i>
+            </li>
+            <li class="list-inline-item">
+                <i class="fab fa-git-square"></i>
+            </li>
+        </ul>
+
+        <div class="subheading mb-3">Workflow</div>
+        <ul class="fa-ul mb-0">
+            <li>
+                <i class="fa-li fa fa-check"></i>
+                Agile Development &amp; Scrum</li>
+            <li>
+                <i class="fa-li fa fa-check"></i>
+                DevOps</li>
+            <li>
+                <i class="fa-li fa fa-check"></i>
+                Wireframing and Design</li>
+        </ul>
+    </div>
+</section>
