@@ -1,7 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: resume
-title: Andrew Jennings' Resume
+layout: default
+title: Andrew's Resume
+permalink: /
+nav_include: resume_nav.html
+content_include: resume_content.html
 ---
