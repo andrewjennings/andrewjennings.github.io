@@ -1,0 +1,36 @@
+- img: 'assets/img/districtbuilder-draw.jpg'
+  title: 'DistrictBuilder - Drawing - @Azavea'
+  caption: 'DistrictBuilder was based on Django and MapServer. It allowed users to create maps of political districts based on population data. We created the open-source software, deployed it for contests in various states, and released AMIs on Amazon Cloud Services so anyone could deploy it easily.'
+
+- img: 'assets/img/districtbuilder-leaderboards.jpg'
+  title: 'DistrictBuilder - Leaderboards @Azavea'
+  caption: 'DistrictBuilder had leaderboards where users could submit their maps and have them ranked on various measures of compactness. I created a link from our Django project to BARD, a library written in R that measured the compactness of political districts.'
+
+- img: 'assets/img/timesheets-entry-wireframe.png'
+  title: 'SAS Timesheets - Wireframe for Entry Page - @IRAD'
+  caption: 'One of the first applications I worked on for IRAD was the SAS Timesheets application, which non-exempt school employees used to enter their hours worked. There were a few different UI parts that were shown depending on whether an employee was exempt, did grants-based work, or was eligible for overtime. We often brought wireframes to meetings to show off basic UI ideas and get a conversation going.'
+
+- img: 'assets/img/chairs-table.png'
+  title: 'Endowed Chairs - Front Page - @IRAD'
+  caption: 'The Endowed Chairs app replaced an Access database. This front page is a simple table with options to filter, sort, and export the listed data. Common filter sets are available via a dropdown for quick access.'
+
+- img: 'assets/img/chairs-overview.png'
+  title: 'Endowed Chairs - Detail Page - @IRAD'
+  caption: 'The page for each individual chair allows users to view or edit data based on role. Dialogs use jQuery to post/update the Symfony forms created by the backend.'
+
+- img: 'assets/img/reviewer-todo.png'
+  title: 'Penn Reviewer - Front Page - @IRAD'
+  caption: 'Penn Reviewer allows students and teachers to interact with assignments in Critical Writing classes.  The front page differs by role and shows a list of assignments to be submitted or graded.'
+
+- img: 'assets/img/reviewer-grading.png'
+  title: 'Penn Reviewer - Grading Page - @IRAD'
+  caption: 'This page allows readers to read assignments (submitted as PDF or DOC), assign grades, and comment on work based on a criteria created by the department. Grades and comments are automatically saved. The frontend for the app is Angular 4 and the backend is Symfony. The "document" being graded is the wireframe for the TODO page.'
+
+- img: 'assets/img/reviewer-group-wireframe.png'
+  title: 'Penn Reviewer - Review Group Editor Wireframe - @IRAD'
+  caption: 'This is a wireframe for the drag-and-drop editor for editing review groups - the groups of people who would review the same assignments. This Balsamiq wireframe was also a jumping-off point to discuss other questions about review groups.'
+
+- img: 'assets/img/reviewer-assignment-calendar.png'
+  title: 'Penn Reviewer - Assignment Calendar - @IRAD'
+  caption: 'This is where instructors create assignments, set deadlines, and release assignments to students. It uses a drag-and-drop UI, which was common throughout the app.'
+
