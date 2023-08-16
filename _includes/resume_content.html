@@ -1,117 +1,172 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-    <div class="w-100">
-        <h1 class="mb-0">Andrew
-            <span class="text-primary">Jennings</span>
-        </h1>
-        <div class="subheading mb-5">Philadelphia, PA ·
-            <a href="mailto:afjennings@gmail.com">afjennings@gmail.com</a>
-        </div>
-        <p class="lead mb-5">I am a web developer with more than ten years of experience creating attractive and easy-to-use applications. My experience in systems administration means that I can design and debug an application from top to bottom and deploy it on local hardware or in the cloud.</p>
-        <div class="social-icons">
-            <a href="https://github.com/andrewjennings" target="github" title="Check out my Github" >
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="{{ 'assets/afjennings_resume.pdf' | relative_url }}" target="resume" title="Download my resume as a PDF">
-                <i class="fas fa-file-pdf"></i>
-            </a>
-        </div>
+  <div class="w-100">
+    <h1 class="mb-0">
+      Andrew
+      <span class="text-primary">Jennings</span>
+    </h1>
+    <div class="subheading mb-5">
+      Philadelphia, PA ·
+      <a href="mailto:afjennings@gmail.com">afjennings@gmail.com</a>
     </div>
+    <p class="lead mb-5">
+      I am a web developer with more than ten years of experience creating
+      attractive and easy-to-use applications. My experience in systems
+      administration means that I can design and debug an application from top
+      to bottom and deploy it on local hardware or in the cloud.
+    </p>
+    <div class="social-icons">
+      <a
+        href="https://github.com/andrewjennings"
+        target="github"
+        title="Check out my Github"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="{{ 'assets/afjennings_resume.pdf' | relative_url }}"
+        target="resume"
+        title="Download my resume as a PDF"
+      >
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+  </div>
 </section>
 
-<hr class="m-0">
+<hr class="m-0" />
 
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center justify-content-center" id="experience">
-    <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
+<section
+  class="resume-section p-3 p-lg-5 d-flex align-items-center justify-content-center"
+  id="experience"
+>
+  <div class="w-100">
+    <h2 class="mb-5">Experience</h2>
 
-        {% for experience in site.data.experiences %}
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-                <h3 class="mb-0">{{ experience.title }}</h3>
-                <div class="subheading mb-3">{{ experience.employer }}</div>
-                <p>{{ experience.description }}</p>
-            </div>
-            <div class="resume-date text-md-right">
-                <span class="text-primary">{{ experience.time_frame }}</span>
-            </div>
+    {% for experience in site.data.experiences %}
+    <div
+      class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+    >
+      <div class="resume-content">
+        <h3 class="mb-0">{{ experience.title }}</h3>
+        <div class="subheading mb-3">{{ experience.employer }}</div>
+        <p>{{ experience.description }}</p>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">{{ experience.time_frame }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<hr class="m-0" />
+
+<section
+  class="resume-section p-3 p-lg-5 d-flex align-items-center"
+  id="education"
+>
+  <div class="w-100">
+    <h2 class="mb-5">Education</h2>
+
+    {% for education in site.data.educations %}
+    <div
+      class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+    >
+      <div class="resume-content">
+        <h3 class="mb-0">{{ education.location }}</h3>
+        <div class="subheading mb-3">{{ education.degree}}</div>
+        <div>{{ education.track }}</div>
+      </div>
+      <div class="resume-date text-md-right">
+        <span class="text-primary">{{ education.time_frame }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<hr class="m-0" />
+
+<section
+  class="resume-section p-3 p-lg-5 d-flex align-items-center"
+  id="skills"
+>
+  <div class="w-100">
+    <h2 class="mb-3">Skills</h2>
+    <p class="mb-4">
+      The tools we use to create on the web change constantly. I'm adaptable,
+      and this is only what I've used during my career so far.
+    </p>
+
+    <div class="subheading mb-1">Programming Languages &amp; Tools</div>
+    <ul class="fa-ul">
+      <li>
+        <i class="fa-li fa fa-code"></i>PHP, Python, TypeScript, JavaScript,
+        Kotlin
+      </li>
+    </ul>
+    <div class="subheading mb-1">Software &amp; Frameworks</div>
+    <ul class="fa-ul">
+      <li>
+        <i class="fa-li fa fa-cogs"></i>Laravel, React, React Native, Symfony,
+        Vue.js, Tailwind
+      </li>
+    </ul>
+    <div class="subheading mb-1">DevOps Tools</div>
+    <ul class="fa-ul">
+      <li>
+        <i class="fa-li fa fa-cloud"></i>Docker, traefik, nginx, Amazon Web
+        Services
+      </li>
+    </ul>
+  </div>
+</section>
+<section
+  class="resume-section p-3 p-lg-5 d-flex align-items-top"
+  id="portfolio"
+>
+  <div class="w-100">
+    <h2 class="mb-5">Portfolio</h2>
+    <div
+      id="carousel-portfolio"
+      class="carousel slide carousel-fade"
+      data-interval="false"
+    >
+      <div class="carousel-inner container">
+        {% for portfolio-item in site.data.portfolio-items %}
+        <div
+          class="carousel-item{% if forloop.first == true %} active{% endif %}"
+        >
+          <div class="carousel-caption d-none d-block">
+            <h5>{{ portfolio-item.title }}</h5>
+            <p>{{ portfolio-item.caption}}</p>
+          </div>
+          <img
+            src="{{ portfolio-item.img | relative_url }}"
+            class="w-100 d-block"
+            alt="a screenshot of a web page"
+          />
         </div>
         {% endfor %}
-
+      </div>
+      <a
+        class="carousel-control-prev pt-5"
+        href="#carousel-portfolio"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next pt-5"
+        href="#carousel-portfolio"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-
-</section>
-
-<hr class="m-0">
-
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-    <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        {% for education in site.data.educations %}
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="resume-content">
-                <h3 class="mb-0">{{ education.location }}</h3>
-                <div class="subheading mb-3">{{ education.degree}}</div>
-                <div>{{ education.track }}</div>
-            </div>
-            <div class="resume-date text-md-right">
-                <span class="text-primary">{{ education.time_frame }}</span>
-            </div>
-        </div>
-        {% endfor %}
-
-    </div>
-</section>
-
-<hr class="m-0">
-
-<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-    <div class="w-100">
-        <h2 class="mb-3">Skills</h2>
-        <p class="mb-4">The tools we use to create on the web change constantly. I'm adaptable, and this is only what I've used during my career so far.</p>
-
-        <div class="subheading mb-1">Programming Languages &amp; Tools</div>
-        <ul class="fa-ul">
-            <li> <i class="fa-li fa fa-code"></i>
-                PHP, Python, C#, JavaScript, TypeScript, SQL </li>
-        </ul>
-        <div class="subheading mb-1">Software &amp; Frameworks</div>
-        <ul class="fa-ul">
-            <li> <i class="fa-li fa fa-cogs"></i>
-                Laravel, Symfony, Vue.js, Angular, Django, PostGIS, .Net MVC, jQuery,
-                Bootstrap, Tailwind, Balsamiq Wireframes</li>
-        </ul>
-        <div class="subheading mb-1">DevOps Tools</div>
-        <ul class="fa-ul">
-            <li> <i class="fa-li fa fa-cloud"></i>
-                Docker, traefik, nginx, Amazon Web Services</li>
-        </ul>
-
-    </div>
-</section>
-<section class="resume-section p-3 p-lg-5 d-flex align-items-top" id="portfolio">
-    <div class="w-100">
-        <h2 class="mb-5">Portfolio</h2>
-        <div id="carousel-portfolio" class="carousel slide carousel-fade" data-interval="false">
-            <div class="carousel-inner container">
-                {% for portfolio-item in site.data.portfolio-items %}
-                <div class="carousel-item{% if forloop.first == true %} active{% endif %}">
-                    <div class="carousel-caption d-none d-block">
-                        <h5>{{ portfolio-item.title }}</h5>
-                        <p>{{ portfolio-item.caption}}</p>
-                    </div>
-                    <img src="{{ portfolio-item.img | relative_url }}" class="w-100 d-block" alt="a screenshot of a web page">
-                </div>
-                {% endfor %}
-            </div>
-            <a class="carousel-control-prev pt-5" href="#carousel-portfolio" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next pt-5" href="#carousel-portfolio" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
+  </div>
 </section>
